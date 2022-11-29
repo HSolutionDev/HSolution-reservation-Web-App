@@ -1,13 +1,14 @@
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import Error from "./components/Error/Error";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/">
-          {/* <Route index element={<Home />} /> */}
+          <Route index element={<Home />} />
           {/* Dashboard */}
 
           {/* Pages */}
