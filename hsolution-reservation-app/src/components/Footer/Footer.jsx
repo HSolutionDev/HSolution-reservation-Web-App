@@ -34,9 +34,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer>
-        <Waves />
-      </footer>
+      <footer>{/* <Waves /> */}</footer>
     </>
   );
 }

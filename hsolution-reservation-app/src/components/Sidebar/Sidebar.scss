@@ -1,9 +1,10 @@
 .sidebar {
-  position: relative;
+  position: fixed;
   height: 100%;
   width: 200px;
   top: 0;
   left: 0;
+  background: #f7f8fa;
   border-right: 0.5px solid lightgrey;
   min-height: 100vh;
   flex: 1;
@@ -18,24 +19,24 @@
     .logo {
       font-size: 20px;
       font-weight: bold;
-      color: #6439ff;
+      color: #d19b05;
     }
   }
   .center {
-    padding-left: 10px;
     .toggle {
       position: absolute;
       top: 50%;
       right: -13px;
       transform: translateY(-50%);
-      height: 50px;
-      width: 15px;
+      height: 25px;
+      width: 25px;
       background: #61758f;
       display: flex;
       justify-content: center;
       align-items: center;
       color: #8b4d20;
-      // border-radius: ;
+      border-radius: 50%;
+      font-style: 22px;
     }
     .content {
       position: relative;
@@ -52,15 +53,17 @@
         left: 0;
         top: 0%;
         bottom: 0%;
+
         ul {
           width: 100%;
           list-style: none;
           margin: 0;
           padding: 0;
           .title {
+            padding-left: 7.5px;
             font-size: 10px;
             font-weight: bold;
-            color: #999;
+            color: #7c62e5;
             margin-top: 15px;
             margin-bottom: 5px;
           }
@@ -69,19 +72,7 @@
 
             display: flex;
             align-items: center;
-            .icon {
-              min-width: 60px;
-              justify-content: center;
-              display: flex;
-              align-items: center;
-              font-size: 20px;
-            }
-            span {
-              color: rgb(182, 55, 55);
-              font-weight: 600;
-              font-size: 14px;
-              padding-left: 3px;
-            }
+
             a {
               height: 40px;
               height: 100%;
@@ -92,24 +83,37 @@
               background-size: 200% 100%;
               background-position: -100%;
               display: inline-block;
-              padding: 5px 0;
+              padding: 0px 0 0 20px;
               position: relative;
               -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
+              // -webkit-text-fill-color: transparent;
               transition: all 0.3s ease-in-out;
+              .icon {
+                min-width: 60px;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                vertical-align: 0px !important;
+              }
+              span {
+                font-weight: 600;
+                font-size: 14px;
+                padding-left: 3px;
+              }
             }
 
-            // a:before {
-            //   content: "";
-            //   background: #8b4d20;
-            //   display: block;
-            //   position: absolute;
-            //   bottom: -3px;
-            //   left: 0;
-            //   width: 0;
-            //   height: 3px;
-            //   transition: all 0.3s ease-in-out;
-            // }
+            a:before {
+              content: "";
+              background: #8b4d20;
+              display: block;
+              position: absolute;
+              bottom: -3px;
+              left: 0;
+              width: 0;
+              height: 3px;
+              transition: all 0.3s ease-in-out;
+            }
 
             a:hover {
               background: #8b4d20;
@@ -118,34 +122,43 @@
               transition: all 0.3s ease-in-out;
             }
 
-            a:hover::before {
-              width: 100%;
-            }
+            // a:hover::before {
+            //   width: 100%;
+            // }
           }
         }
       }
     }
   }
   .bottom {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    .color_options {
-      width: 20px;
-      height: 20px;
-      border-radius: 5px;
-      border: 1px solid #7451f8;
-      cursor: pointer;
-      margin-left: 5px;
-
-      &:nth-child(1) {
-        background-color: whitesmoke;
+    .mode {
+      .moon-sun {
+        height: 50px;
+        // width: 60px;
+        display: flex;
+        align-items: center;
+        .icon {
+          position: absolute;
+        }
+        .bx-sun {
+          opacity: 0;
+        }
+        .bx-moon {
+        }
       }
-      &:nth-child(2) {
-        background-color: #333;
-      }
-      &:nth-child(3) {
-        background-color: darkblue;
+      .toggle-switch {
+        height: 100%;
+        min-height: 60px;
+        background: red;
+        align-items: center;
+        justify-content: center;
+        .switch {
+          height: 22px;
+          width: 44px;
+          position: relative;
+          border-radius: 25px;
+          background: var(#000);
+        }
       }
     }
   }

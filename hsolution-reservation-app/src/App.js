@@ -3,35 +3,25 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Error from "./components/Error/Error";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer/Footer";
-// import Header from "./components/Header/Header/Header";
+import Contact from "./Pages/Contact/Contact";
+// import Sidebar from "./components/Sidebar/Sidebar";
+
+import Header from "./components/Header/Header.jsx";
+import RegisterScreen from "./Pages/RegisterScreen/RegisterScreen";
+import Sidebar from "./components/Sidebar/Sidebar";
+import SigninScreen from "./Pages/SigninScreen/SigninScreen";
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <Header /> */}
+      <Header />
       <main>
         <div className="App">
-          <Routes>
-            <Route path="/">
-              <Route index element={<Home />} />
-              {/* Dashboard */}
-
-              {/* Pages */}
-
-              {/* Client */}
-
-              {/* Admin */}
-
-              {/* <Route path="login" element={<Login />} />
-          <Route path="users">
-            <Route index element={<List />} />
-          </Route>
-          <Route path="products">
-            <Route index element={<List />} />
-          </Route> */}
-            </Route>
-            <Route path="*" element={<Error />} />
-          </Routes>
+          <Home />
+          <Sidebar />
+          <RegisterScreen />
+          <SigninScreen />
+          <Contact />
         </div>
       </main>
       <Footer />

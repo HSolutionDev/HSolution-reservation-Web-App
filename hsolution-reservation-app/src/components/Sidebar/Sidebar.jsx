@@ -1,7 +1,7 @@
 import React from "react";
 import "./Sidebar.scss";
 import { Link } from "react-router-dom";
-import ColorThemes from "../ColorThemes/ColorThemes";
+// import ColorThemes from "../ColorThemes/ColorThemes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -21,20 +21,24 @@ import {
   faUserClock,
   faClipboardList,
   faChevronRight,
+  faMoon,
+  faSun,
 } from "@fortawesome/free-solid-svg-icons";
+import Navbar from "../Header/Navbar/Navbar";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <nav>
         <div className="top">
-          <span className="logo">AdminApp</span>
+          <Link to="/">
+            <span className="logo">AdminApp</span>
+          </Link>
         </div>
       </nav>
 
       <div className="center">
         <div className="toggle">
-          {/* <img src="./publicGroup38.svg" alt="toggle" /> */}
           <FontAwesomeIcon icon={faChevronRight} />
         </div>
         <div className="content">
@@ -46,12 +50,12 @@ const Sidebar = () => {
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faScissors} />
                   <span>Prestations</span>
-                </Link>{" "}
+                </Link>
               </li>
               <li>
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faClipboardList} />
-                  <span>Forfait</span>{" "}
+                  <span>Forfait</span>
                 </Link>
               </li>
               <li>
@@ -70,50 +74,50 @@ const Sidebar = () => {
               <li>
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faTruck} />
-                  <span>Deliveries</span>{" "}
+                  <span>Deliveries</span>
                 </Link>
               </li>
               <li>
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faFileInvoice} />
-                  <span>Factures</span>{" "}
+                  <span>Factures</span>
                 </Link>
-              </li>{" "}
+              </li>
               <li className="title">Administration</li>
               <li>
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faCalendarDay} />
-                  <span>Agenda</span>{" "}
+                  <span>Agenda</span>
                 </Link>
               </li>
               <li>
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faUsers} />
-                  <span>Clients </span>{" "}
+                  <span>Clients </span>
                 </Link>
               </li>
               <li>
-                <Link>
+                <Link to="/Contact">
                   <FontAwesomeIcon classname="icon" icon={faEnvelope} />
-                  <span>Messageries</span>{" "}
+                  <span>Messageries</span>
                 </Link>
               </li>
               <li>
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faHandshake} />
-                  <span>Collaborateurs</span>{" "}
+                  <span>Collaborateurs</span>
                 </Link>
               </li>
               <li>
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faChartPie} />
-                  <span>Graphique</span>{" "}
+                  <span>Graphique</span>
                 </Link>
               </li>
               <li>
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faHouse} />
-                  <span>Stocks</span>{" "}
+                  <span>Stocks</span>
                 </Link>
               </li>
               <li className="title">Loyalty</li>
@@ -126,29 +130,39 @@ const Sidebar = () => {
               <li>
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faPercent} />
-                  <span>promo code </span>{" "}
+                  <span>promo code </span>
                 </Link>
               </li>
               <li className="title">System</li>
               <li>
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faFileExport} />
-                  <span>Export logs</span>{" "}
+                  <span>Export logs</span>
                 </Link>
               </li>
               <li>
                 <Link>
                   <FontAwesomeIcon classname="icon" icon={faUserClock} />
-                  <span>Activity logs</span>{" "}
+                  <span>Activity logs</span>
                 </Link>
               </li>
             </ul>
-            {/* <ColorThemes />  */}
           </div>
-          <div className="text-menu">
-            <ul></ul>
-          </div>
+          <div className="text-menu"></div>
         </div>
+        {/* <div className="bottom">
+          <li className="mode">
+            <div className="moon-sun">
+              <FontAwesomeIcon classname="icon bx-moon" icon={faMoon} />
+              <FontAwesomeIcon classname="icon bx-sun" icon={faSun} />
+
+              <span className="mode-text">Dark Mode</span>
+            </div>
+            <div className="toggle-switch">
+              <span className="switch"></span>
+            </div>
+          </li>
+        </div> */}
       </div>
     </div>
   );
