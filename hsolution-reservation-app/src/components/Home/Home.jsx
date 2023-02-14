@@ -17,7 +17,7 @@ const Home = () => {
           <div className="card">
             <div>
               <div className="numbers">1,504</div>
-              <div className="cardName">Daily Views</div>{" "}
+              <div className="cardName">Vues</div>{" "}
             </div>
 
             <div className="iconBx">
@@ -28,7 +28,7 @@ const Home = () => {
           <div className="card">
             <div>
               <div className="numbers">80</div>
-              <div className="cardName">Sales</div>
+              <div className="cardName">Ventes</div>
             </div>
 
             <div className="iconBx">
@@ -39,7 +39,7 @@ const Home = () => {
           <div className="card">
             <div>
               <div className="numbers">284</div>
-              <div className="cardName">Comments</div>
+              <div className="cardName">Commentaires</div>
             </div>
 
             <div className="iconBx">
@@ -49,8 +49,8 @@ const Home = () => {
 
           <div className="card">
             <div>
-              <div className="numbers">7,842</div>
-              <div className="cardName">Earning</div>
+              <div className="numbers">7,842€</div>
+              <div className="cardName">Bénéfices</div>
             </div>
 
             <div className="iconBx">
@@ -63,7 +63,7 @@ const Home = () => {
         <div className="details">
           <div className="recentOrders">
             <div className="cardHeader">
-              <h2>Recent Orders</h2>
+              <h2>Dèrnieres prestations</h2>
               <a href="#" className="btn">
                 View All
               </a>
@@ -72,10 +72,10 @@ const Home = () => {
             <table>
               <thead>
                 <tr>
-                  <td>Name</td>
-                  <td>Price</td>
-                  <td>Payment</td>
-                  <td>Status</td>
+                  <td>Nom</td>
+                  <td>Prix</td>
+                  <td>Paiement</td>
+                  <td>Statut</td>
                 </tr>
               </thead>
 
@@ -139,7 +139,7 @@ const Home = () => {
           {/* <!-- ================= New Customers ================ --> */}
           <div className="recentCustomers">
             <div className="cardHeader">
-              <h2>Recent Customers</h2>
+              <h2>Clients récents</h2>
             </div>
 
             <table>

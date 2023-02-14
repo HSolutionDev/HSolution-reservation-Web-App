@@ -30,7 +30,8 @@ const SigninScreen = () => {
           <button className="">Connexion</button>
           <div className="redirect">
             <span>
-              Vous n'avez pas encore de compte ? <Link>Inscrivez-vous </Link>
+              Vous n'avez pas encore de compte ?
+              <Link to="/register">Inscrivez-vous </Link>
             </span>
           </div>
           <div className="line"></div>

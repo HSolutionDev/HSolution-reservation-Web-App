@@ -22,6 +22,16 @@ const RegisterScreen = () => {
             <div className="input-box">
               <label>Adresse E-mail</label>
               <input type="email  " placeholder="Email" required />
+            </div>{" "}
+            <div className="column">
+              <div className="input-box">
+                <label>Téléphone</label>
+                <input type="number" placeholder="+33 " required />
+              </div>
+              <div className="input-box">
+                <label>Date de naissance</label>
+                <input type="date" placeholder="jj/mm/aaaa" required />
+              </div>
             </div>
             <div className="input-box">
               <label>Mot de passe ( 8 caractères min )</label>
@@ -41,17 +51,8 @@ const RegisterScreen = () => {
               />
             </div>
           </div>
-          <div className="column">
-            <div className="input-box">
-              <label>Téléphone</label>
-              <input type="number" placeholder="+33 " required />
-            </div>
-            <div className="input-box">
-              <label>Date de naissance</label>
-              <input type="date" placeholder="jj/mm/aaaa" required />
-            </div>
-          </div>
-          <div className="gender-box">
+
+          {/* <div className="gender-box">
             <h3>Sexe</h3>
             <div className="gender-option">
               <div className="gender">
@@ -99,11 +100,12 @@ const RegisterScreen = () => {
                 <input type="text" placeholder="Code Postal" required />
               </div>
             </div>
-          </div>
+          </div> */}
           <button className="">Envoyé</button>
           <div className="redirect">
             <span>
-              Vous possédez déja un compte? <Link>Connectez vous </Link>
+              Vous possédez déja un compte?{" "}
+              <Link to="/signin">Connectez vous </Link>
             </span>
           </div>
           <div className="line"></div>
